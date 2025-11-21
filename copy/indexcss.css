@@ -1,0 +1,52 @@
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #ccc;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(252, 244, 227);
+    align-items: center;
+    display: flex;
+    padding: 0 20px;
+}
+#navbar > a{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    text-decoration: none;
+}
+#logoimg{
+    transition: transform 0.3s ease;
+}
+#navbar > button{
+    position: absolute;
+    right: 0;
+    top: 0px;
+    /* margin: 5px 5px 5px; */
+    height: 40px;
+    width: 100px;
+    color: rgb(23,20,18);
+    background-color: rgb(264, 244, 229);
+    border-radius: 10%;
+    border: 0px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* padding: 15px 30px; */
+    transition: background-color 0.5s ease;
+}
+#loginlink:link{
+    color: rgb(23,20,18);
+}
+#loginlink{
+    font-weight: bold;
+    font-size:x-small;
+    text-decoration: none;
+}
+#loginbutton:hover{
+    transform:scale(1.1);
+    background-color: rgb(241,224,209);
+}
+#logoimg:hover{
+    transform: scale(1.1);
+}
