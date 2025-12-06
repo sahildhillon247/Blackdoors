@@ -1,141 +1,144 @@
+ 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ------------------ NAVBAR ------------------ */
+
 #navbar {
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: 1px solid #ccc;
     height: 60px;
     width: 100%;
     background-color: rgb(252, 244, 227);
+    border-bottom: 1px solid #ccc;
+
     display: flex;
     align-items: center;
-    padding: 0 20px;
-}
+    justify-content: space-between;
 
-#navbar > a {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    text-decoration: none;
-    
+    padding: 0 20px;
+    z-index: 10;
 }
 
 #logoimg {
     height: 50px;
-    width: 110px;
     transition: transform 0.3s ease;
 }
 
 #logoimg:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
-
-#navbar > button {
-    position: absolute;
-    right: 40px;
-    top: 10px;
-    height: 40px;
-    width: 100px;
-    color: rgb(23,20,18);
-    background-color: rgb(264, 244, 229);
-    border-radius: 10%;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.5s ease;
-}
-
-#loginlink {
-    font-weight: bold;
-    font-size: x-small;
-    text-decoration: none;
-    color: rgb(23,20,18);
-}
-
-#loginbutton:hover {
-    transform: scale(1.1);
-    background-color: rgb(241,224,209);
-}
-
-#hero {
-    margin-top: 60px;
-    height: 90vh;
-    background: url('heroimg.jpg') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #000000;
-    background-color: #f6eee0; /* Fallback if no image */
-}
-
-
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    color: rgb(255, 255, 255);
-    
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-#searchbar {
-    width: 60%;
-    max-width: 500px;
-    padding: 12px 15px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
-    transition: 0.3s ease;
-}
-
-#searchbar:focus {
-    border-color: black;
-    box-shadow: 0 0 4px rgba(0,0,0,0.4);
-}
-/* footer */
-#footer {
-    background-color: rgb(252, 244, 227);
-    padding: 30px;
-    text-align: center;
-    border-top: 1px solid #ccc;
-    margin-top: 50px;
-    
-    
-}
-#footer a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    
-}
-
-#footer a:hover {
-    text-decoration: underline;
-}
-
-/* navbar links */
 
 #navlinks {
-    margin: 0 auto;
     display: flex;
     gap: 25px;
-    position: relative;
-    
 }
 
 .navitem {
     text-decoration: none;
     font-weight: bold;
     color: rgb(23,20,18);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     transition: 0.3s ease;
 }
 
 .navitem:hover {
-    transform: scale(1.1);
-    color: rgb(255, 0, 0);
+    transform: scale(1.12);
+    color: rgb(255, 60, 50);
+}
+
+#loginbutton {
+    padding: 8px 15px;
+    background-color: rgb(264, 244, 229);
+    color: rgb(23,20,18);
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.75rem;
+
+    border: none;
+    transition: 0.3s ease;
+}
+
+#loginbutton:hover {
+    transform: scale(1.08);
+    background-color: rgb(241,224,209);
+}
+
+/* ------------------ HERO ------------------ */
+
+#hero {
+    margin-top: 60px;
+    height: 90vh;
+
+    background: linear-gradient(
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0.25)
+    ),
+    url('heroimg.jpg') center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    width: 90%;
+}
+
+.hero-content h2 {
+    color: rgb(255,245,230);
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+}
+
+#searchbar {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+
+    background-color: rgba(255,255,255,0.8);
+    margin-bottom: 20px;
+
+    transition: 0.3s ease;
+}
+
+#searchbar:focus {
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+.hero-content p {
+    color: rgb(252,240,220);
+    font-size: 1.1rem;
+}
+
+/* ------------------ FOOTER ------------------ */
+
+#footer {
+    background-color: rgb(252, 244, 227);
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#footer a:hover {
+    text-decoration: underline;
 }
