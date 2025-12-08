@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="logincss.css">
 </head>
 <body>
+    <button id="darkmodebtn" onclick="toggleTheme()">Theme</button>
+
 
     <div class="container">
 
@@ -33,6 +35,18 @@
         </div>
 
     </div>
+
+<script>
+function toggleTheme() {
+    if (document.body.className === "dark") {
+        document.body.className = "";
+    } else {
+        document.body.className = "dark";
+    }
+}
+</script>
+
+
 
 </body>
 </html>

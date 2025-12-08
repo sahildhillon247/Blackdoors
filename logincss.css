@@ -74,9 +74,10 @@ input:focus {
     transition: 0.25s ease;
 }
 
-#loginbtn:hover {
-    transform: translateY(-2px);
-    background-color: rgb(60, 50, 45);
+#loginbutton:hover {
+    transform: scale(1.08);
+    background-color: rgb(109,78,53);
+    color: rgb(255,245, 230);
 }
 .signup-text {
     text-align: center;
@@ -92,4 +93,56 @@ input:focus {
 
 .signup-link:hover {
     text-decoration: underline;
+}
+
+#darkmodebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#toggleDark:hover {
+    opacity: 0.8;
+}
+
+body.dark {
+    background-color: #1c1c1c;
+}
+
+body.dark .login-box {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+body.dark input {
+    background: #444;
+    color: white;
+    border: 1px solid #777;
+}
+
+body.dark input::placeholder {
+    color: #ccc;
+}
+
+body.dark label,
+body.dark .subtitle,
+body.dark .signup-text,body.dark .login-box h2 {
+    color: #ddd;
+}
+
+body.dark .signup-link {
+    color: white;
+}
+
+body.dark #loginbtn {
+    background-color: #e6e6e6;
+    color: black;
 }

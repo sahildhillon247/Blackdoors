@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3.75rem;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(252, 244, 227);
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    z-index: 1000;
+}
+
+#navbar > a {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.3rem;
+    text-decoration: none;
+}
+
+#logoimg {
+    height: 3.1rem;
+    width: 7rem;
+    transition: transform 0.3s ease;
+}
+
+#logoimg:hover {
+    transform: scale(1.1);
+}
+
+#navbar > button {
+    position: absolute;
+    right: 2.5rem;
+    height: 2.5rem;
+    width: 6.25rem;
+    background-color: rgb(264, 244, 229);
+    border-radius: 8%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.4s ease;
+}
+
+#loginlink {
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: rgb(23,20,18);
+    text-decoration: none;
+}
+
+#loginbutton:hover {
+    transform: scale(1.1);
+    background-color: rgb(241,224,209);
+}
+
+#sell-section {
+    padding: 6.2rem 10%;
+    text-align: center;
+}
+
+#sell-section h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+
+#sell-form-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s ease;
+}
+
+#sell-form {
+    width: 21rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.6rem;
+    background: white;
+    animation: fadeUp 0.8s ease;
+}
+
+#sell-form input,
+#sell-form select,
+#sell-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #bbb;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+
+#submitbtn {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#submitbtn:hover {
+    opacity: 0.8;
+}
+
+#sell-info {
+    width: 21rem;
+    padding: 1.5rem;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 0.6rem;
+    background: white;
+    animation: fadeUp 0.8s ease;
+}
+
+#sell-info h2 {
+    margin-bottom: 1rem;
+}
+
+#sell-info ul {
+    list-style: none;
+    line-height: 2rem;
+}
+
+#sell-info li {
+    font-size: 1rem;
+}
+
+#footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 3rem;
+}
+
+#footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(1rem); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    #sell-section {
+        padding: 5.5rem 5%;
+    }
+
+    #sell-form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sell-form, #sell-info {
+        width: 90%;
+    }
+}

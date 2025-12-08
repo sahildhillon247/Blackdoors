@@ -1,27 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(252, 244, 227);
+}
+
 #navbar {
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: 1px solid #ccc;
-    height: 60px;
+    height: 3.75rem;
     width: 100%;
     background-color: rgb(252, 244, 227);
+    border-bottom: 1px solid #ccc;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 1.25rem;
+    z-index: 1000;
 }
 
 #navbar > a {
     position: absolute;
-    top: 6px;
-    left: 6px;
+    top: 0.4rem;
+    left: 0.4rem;
     text-decoration: none;
-    
 }
 
 #logoimg {
-    height: 50px;
-    width: 110px;
+    height: 3.2rem;
+    width: 6.8rem;
     transition: transform 0.3s ease;
 }
 
@@ -31,10 +46,10 @@
 
 #navbar > button {
     position: absolute;
-    right: 40px;
-    top: 10px;
-    height: 40px;
-    width: 100px;
+    right: 2rem;
+    top: 0.6rem;
+    height: 2.5rem;
+    width: 6rem;
     color: rgb(23,20,18);
     background-color: rgb(264, 244, 229);
     border-radius: 10%;
@@ -45,7 +60,7 @@
 
 #loginlink {
     font-weight: bold;
-    font-size: x-small;
+    font-size: 0.7rem;
     text-decoration: none;
     color: rgb(23,20,18);
 }
@@ -56,90 +71,157 @@
 }
 
 #buy-section {
-    padding: 50px 10%;
+    padding: 6rem 8% 3rem;
     text-align: center;
 }
 
 #buy-section h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.05rem;
 }
 
 .subtitle {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 2.5rem;
 }
 
 #search-area {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 #searchbar {
-    width: 300px;
-    padding: 10px;
-    font-size: 16px;
+    width: 60%;
+    max-width: 22rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid #aaa;
 }
 
 #searchbtn {
-    padding: 10px 20px;
-    margin-left: 10px;
+    padding: 0.75rem 1.5rem;
+    margin-left: 0.6rem;
     cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+#searchbtn:hover {
+    opacity: 0.8;
 }
 
 .property-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(12rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.92);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 .property-card {
-    width: 280px;
+    background-color: white;
+    border-radius: 0.6rem;
     border: 1px solid #ddd;
-    border-radius: 6px;
     overflow: hidden;
-    text-align: left;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    animation: scaleIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+.property-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0.8rem 1.2rem rgba(0,0,0,0.15);
 }
 
 .property-card img {
     width: 100%;
-    height: 180px;
+    height: 11rem;
     object-fit: cover;
 }
 
 .property-card h3 {
-    padding: 10px;
-    font-size: 18px;
+    padding: 0.8rem;
+    font-size: 1.1rem;
 }
+
 .property-card p {
-    padding: 0 10px 10px;
+    padding: 0 0.8rem 1rem;
     color: #444;
+    font-size: 0.95rem;
 }
 
 .viewbtn {
     width: 100%;
-    padding: 10px;
+    padding: 0.75rem;
     border: none;
     background-color: black;
     color: white;
+    font-size: 1rem;
     cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
 .viewbtn:hover {
     opacity: 0.8;
 }
+
 #footer {
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 1.5rem;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 3rem;
+    font-size: 0.95rem;
 }
+
 #footer a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
+
 #footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    #navbar > button {
+        right: 0.8rem;
+        width: 5rem;
+        height: 2.2rem;
+    }
+
+    #buy-section h1 {
+        font-size: 1.8rem;
+    }
+
+    #searchbar {
+        width: 85%;
+        max-width: none;
+    }
 }
